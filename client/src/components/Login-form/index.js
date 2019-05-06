@@ -1,19 +1,36 @@
 import React from "react";
 
-const LoginForm = () => {
-  return (
-    <div>
-      <form>
-        Username:
-        <input type="text" name="name" placeholder="username" />
-        Password:
-        <input type="password" name="name" placeholder="password" />
-      </form>
+class LoginForm extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
 
-      <button>Login </button>
-      <button>Add new user button</button>
-    </div>
-  );
-};
+  render() {
+    return (
+      <div>
+        <form>
+          Username:
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            value="Username Input"
+          />
+          Password:
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            value="Password Input"
+          />
+        </form>
+
+        <button>Login </button>
+        <button>Add new user button</button>
+      </div>
+    );
+  }
+}
 
 export default LoginForm;
