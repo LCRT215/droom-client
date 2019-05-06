@@ -1,16 +1,48 @@
 import React from "react";
 import Login from "./components/Login/Login";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Login />
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      schools: []
+    };
+  }
 
-        <p>Test for GitHub PR</p>
-      </header>
-    </div>
-  );
+  componentDidMount() {
+    axios
+      .get("")
+      .then(res => {
+        this.setState({ schools: res.data });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({ error: err });
+      });
+  }
+
+  addSchool = school => {
+    axios
+      .post("", school)
+      .then(res => {
+        this.setState({ schools: res.data });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({ error: err });
+      });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Login />
+
+          <p>Test for GitHub PR</p>
+        </header>
+      </div>
+    );
+  }
 }
-
 export default App;

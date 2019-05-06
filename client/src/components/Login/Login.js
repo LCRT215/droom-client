@@ -1,12 +1,14 @@
 import React from "react";
-import LoginForm from "../Login-form";
+import LoginForm from "../LoginForm/index";
+import NewUser from '../NewUser/NewUser';
 
 const Login = () => {
   return (
     <div>
       <h1>Login Page</h1>
-      <button>Donate here!</button>
+      <button>To Donate page link!</button>
       <LoginForm />
+      <NewUser />
     </div>
   );
 };
