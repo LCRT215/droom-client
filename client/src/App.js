@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to Droom</h1>
+        <Login />
+
         <p>Test for GitHub PR</p>
       </header>
     </div>
