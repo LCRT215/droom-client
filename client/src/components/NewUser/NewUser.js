@@ -1,5 +1,10 @@
 import React from "react";
 
+const newUser = {
+  border: "solid 2px pink",
+  backgroundColor: "lightgrey"
+};
+
 class NewUser extends React.Component {
   constructor() {
     super();
@@ -8,7 +13,8 @@ class NewUser extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={newUser}>
+        <h2> heyyyyyy from new user </h2>
         <form>
           Username:
           <input
@@ -24,7 +30,7 @@ class NewUser extends React.Component {
             placeholder="password"
             value="Password Input"
           />
-            Password:
+          Password:
           <input
             type="password"
             name="password"
@@ -38,6 +44,5 @@ class NewUser extends React.Component {
     );
   }
 }
-
 
 export default NewUser;
